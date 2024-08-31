@@ -6,6 +6,106 @@
     <title>Weather Set Pack</title>
 </head>
 <body>
-    <h1>Hello!</h1>
+    <div id="header">
+        <form>
+            <span>I am travelling from</span>
+            <input type="text" id="location-to" name="locationFrom">
+            <span>to</span>
+            <input type="text" id="location-from" name="locationTo">
+            <span>from</span>
+            <input type="date" id="date-from" name="dateFrom">
+            <span>to</span>
+            <input type="date" id="date-to" name="dateTo">
+            <button type="submit">Get Weather</button>
+        </form>
+    </div>
+    <div id="main">
+        <div class="weather" id="weather-current">
+            <section class="section-location" id="weather-current-location">
+                <div class="location-text">Toronto, ON</div>
+                <div class="location-text-details">Saturday 31 August 2024 | 21:30</div>
+            </section>
+            <section class="section-temp" id="weather-current-temp">
+                <div class="temp-icon">Icon</div>
+                <div class="temp-temp">30°C</div>
+                <div class="temp-desc">
+                    <div class="temp-desc-text" id="current-temp-desc-desc">Sunny</div>
+                    <div class="temp-desc-text" id="current-temp-desc-feels-like">Feels like 32°C</div>
+                    <div class="temp-desc-text" id="current-temp-desc-feels-hl">High: 33°C Low: 20°C</div>
+                </div>
+            </section>
+            <section class="section-details" id="weather-current-details">
+                <div class="details">
+                    <div class="details-desc" id="weather-current-details-desc-precip">Precipitation</div>
+                    <div class="details-data" id="weather-current-details-data-precip">20%</div>
+                </div>
+                <div class="details">
+                    <div class="details-desc" id="weather-current-details-desc-humidity">Humidity</div>
+                    <div class="details-data" id="weather-current-details-data-humidity">60%</div>
+                </div>
+                <div class="details">
+                    <div class="details-desc" id="weather-current-details-desc-uv-index">UV Index</div>
+                    <div class="details-data" id="weather-current-details-data-uv-index">5</div>
+                </div>
+                <div class="details">
+                    <div class="details-desc" id="weather-current-details-desc-wind-speed">Wind Speed</div>
+                    <div class="details-data" id="weather-current-details-data-wind-speed">10 km/h</div>
+                </div>
+                <div class="details">
+                    <div class="details-desc" id="weather-current-details-desc-cloud-cover">Cloud Cover</div>
+                    <div class="details-data" id="weather-current-details-data-cloud-cover">10%</div>
+                </div>
+                <div class="details">
+                    <div class="details-desc" id="weather-current-details-desc-visibility">Visibility</div>
+                    <div class="details-data" id="weather-current-details-data-visibility">16 km</div>
+                </div>
+            </section>
+        </div>
+        <div class="weather" id="weather-new">
+            <section class="section-location" id="weather-new-location">
+                <div class="location-text">Hong Kong, Hong Kong</div>
+                <div class="location-text-details">Saturday 31 August 2024 | 21:30</div>
+            </section>
+            <section class="section-temp" id="weather-new-temp">
+                <div class="temp-icon">Icon</div>
+                <div class="temp-temp">28°C</div>
+                <div class="temp-desc">
+                    <div class="temp-desc-text" id="new-temp-desc-desc">Rainy</div>
+                    <div class="temp-desc-text" id="new-temp-desc-feels-like">Feels like 30°C</div>
+                    <div class="temp-desc-text" id="new-temp-desc-feels-hl">High: 31°C Low: 25°C</div>
+                </div>
+            </section>
+            <section class="section-details" id="weather-new-details">
+                <div class="details">
+                    <div class="details-desc" id="weather-new-details-desc-precip">Precipitation</div>
+                    <div class="details-data" id="weather-new-details-data-precip">80%</div>
+                </div>
+                <div class="details">
+                    <div class="details-desc" id="weather-new-details-desc-humidity">Humidity</div>
+                    <div class="details-data" id="weather-new-details-data-humidity">75%</div>
+                </div>
+                <div class="details">
+                    <div class="details-desc" id="weather-new-details-desc-uv-index">UV Index</div>
+                    <div class="details-data" id="weather-new-details-data-uv-index">3</div>
+                </div>
+                <div class="details">
+                    <div class="details-desc" id="weather-new-details-desc-wind-speed">Wind Speed</div>
+                    <div class="details-data" id="weather-new-details-data-wind-speed">15 km/h</div>
+                </div>
+                <div class="details">
+                    <div class="details-desc" id="weather-new-details-desc-cloud-cover">Cloud Cover</div>
+                    <div class="details-data" id="weather-new-details-data-cloud-cover">60%</div>
+                </div>
+                <div class="details">
+                    <div class="details-desc" id="weather-new-details-desc-visibility">Visibility</div>
+                    <div class="details-data" id="weather-new-details-data-visibility">10 km</div>
+                </div>
+            </section>
+        </div>
+        <div class="reminder">
+            <section class="section-heading">Tips</section>
+            <section class="section-content"></section>
+        </div>
+    </div>
 </body>
 </html>

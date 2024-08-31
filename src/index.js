@@ -2,6 +2,7 @@ import "./styles.css"
 import getWeatherData, { LocationDateInput } from "./api.js"
 import processSingleDayWeatherData, { SingleDayWeather } from "./process-single-day-weather-data.js"
 import messageGenerator, { Message } from "./message-generator.js"
+import display from "./display.js"
 
 async function main() {
     try {
@@ -21,8 +22,10 @@ async function main() {
         processSingleDayWeatherData(currentWeather, currentWeatherData);
         console.log(currentWeather);
 
-        let message = messageGenerator(currentWeather, travelDaysWeather);
-        console.log(message)
+        let messages = messageGenerator(currentWeather, travelDaysWeather);
+        console.log(messages)
+
+        display(currentWeather, travelDaysWeather, messages)
     }
     catch (error){
         console.error("An error occurred: ", error);
