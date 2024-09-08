@@ -50,21 +50,30 @@ export default function display(currentWeather, travelDaysWeather, messages) {
     const reminderSection = document.querySelector('.reminder .section-content');
     reminderSection.innerHTML = ''; // Clear existing messages
 
-    const tipsHeader = document.createElement('h3');
-    tipsHeader.textContent = 'Tips';
-    document.querySelector('.reminder .section-heading').appendChild(tipsHeader);
-
     for (let i = 0; i < messages.length; i++) {
         const message = messages[i];
-
-        const messageText = document.createElement('p');
-        messageText.textContent = `${message.condition} - ${message.observation}`;
-        reminderSection.appendChild(messageText);
-
-        message.recommendations.forEach(recommendation => {
-            const recItem = document.createElement('p');
-            recItem.textContent = `- ${recommendation}`;
-            reminderSection.appendChild(recItem);
-        });
+    
+        const messageBox = document.createElement('div');
+        messageBox.className = 'message-box';
+    
+        const messageCO = document.createElement('p');
+        messageCO.className = 'message-condition-observation';
+        messageCO.textContent = `${message.condition} - ${message.observation}`;
+        messageBox.appendChild(messageCO);
+    
+        if (Array.isArray(message.recommendations)) {
+            const recommendationList = document.createElement('ul');
+            recommendationList.className = 'recommendation-list';
+    
+            for (let j = 0; j < message.recommendations.length; j++) {
+                const recommendationItem = document.createElement('li');
+                recommendationItem.textContent = message.recommendations[j];
+                recommendationList.appendChild(recommendationItem);
+            }
+    
+            messageBox.appendChild(recommendationList);
+        }
+    
+        reminderSection.appendChild(messageBox);
     }
 }

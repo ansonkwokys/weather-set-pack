@@ -17,8 +17,20 @@ html, body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 60%;
+    height: 55%;
     
+}
+
+#other-days {
+    display: flex;
+    height: 35%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.scrollable-item {
+    flex: 0 0 auto;
+    padding: 10px
 }
 
 .weather,
@@ -33,6 +45,12 @@ html, body {
     place-items: center;
     grid-template-columns: 1fr; 
     grid-template-rows: 25% 25% 50%;
+}
+
+.reminder {
+    display: grid;
+    place-items: center;
+    grid-template-rows: 17.5% 82.5%;
 }
 
 .section-location {
@@ -78,8 +96,8 @@ html, body {
 }
 
 .temp-icon {
-    flex: 1;
-    text-align: center;
+    flex: 2;
+    text-align: right;
 }
 
 .temp-temp {
@@ -93,7 +111,7 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+    text-align: left;
 }
 
 .section-details {
@@ -125,9 +143,11 @@ html, body {
 }
 
 .section-heading {
+    display: flex;
     width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .section-content {
@@ -135,6 +155,7 @@ html, body {
     max-height: 80%;
     overflow-y: auto;
 }
+
 
 /*asethetics*/
 
@@ -200,6 +221,7 @@ body {
 }
 
 .section-heading {
+    font-weight: bold;
     margin: 0;
     font-size: 2em;
     color: #4a90e2;
